@@ -1,0 +1,8 @@
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+composer.lock
+README.md
+/recursos
+/App/Config/Config.php
