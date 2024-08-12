@@ -12,8 +12,14 @@ class ControllerXv {
             try {
                 $uid=$_POST['huid'];
                 $deseos = new ModelDeseos();
-                $insert = $deseos->setasistencia($_POST,$uid);
-                echo json_encode(['status'=>true,],200);
+                if($this->getexist($uid)){
+                    echo json_encode(['status'=>false,'message'=>'Usted ya confirmo sus asistencia, mucha gracias'],400);
+                    return;
+                }else{
+                    $insert = $deseos->setasistencia($_POST,$uid);
+                    echo json_encode(['status'=>true,],200);
+                }
+                
 
             } catch (\Throwable $e) {
                 echo json_encode(['status'=>false,'message'=>'error en la solicitud'],400);
@@ -22,6 +28,13 @@ class ControllerXv {
         }else{
             echo json_encode(['status'=>false,'message'=>'Solicitud no permitida'],400);
         }
+    }
+
+    private function getexist($uid){
+        $deseos = new ModelDeseos();
+        $asiste=$deseos->getconfirAsistencia($uid);
+
+        return $asiste;
     }
 
 }

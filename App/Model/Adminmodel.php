@@ -26,7 +26,7 @@ class Adminmodel extends Model{
             $statement = $this->db->prepare('INSERT INTO invitados (Nombre,pases, uid) VALUES (:Nombre,:pases,:uid)');
 
                 $status = $statement->execute([
-                    'Nombre' => utf8_decode($datos),
+                    'Nombre' => $datos,
                     'pases'=>$pase,
                     'uid' => Uuid::uuid4(),
                     ]);
@@ -43,6 +43,6 @@ class Adminmodel extends Model{
         $sql = "SELECT Nombre,pases,uid FROM invitados";
         $query = $this->db->prepare($sql);
         $query->execute();
-        return $query->fetchAll();
+        return $query->fetch();
     }
 }

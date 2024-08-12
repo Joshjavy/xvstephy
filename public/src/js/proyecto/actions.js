@@ -19,20 +19,25 @@ function handleSubmit(event) {
   axios
   .post(`${url}`,formData)
   .then(function (response) {
-    console.log(response.data);
+    console.log(response.data.status);
       const sms=`<p class='text-center'>
           Gracias por tu confirmación.
       </p><br/>
       `
-      message(sms)
-      document.querySelector("form[name='asistencia']").reset()
+      if(response.data.status){
+        message(sms)
+      }else{
+        message(response.data.message)
+      }
+      
+      
   })
   .catch(function (error) {
       // handle error
       message(error.response.data.message)
   })
   .finally(function () {
-      // always executed
+    document.querySelector("form[name='asistencia']").reset()
   });
 
 

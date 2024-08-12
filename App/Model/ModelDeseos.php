@@ -54,4 +54,18 @@ class ModelDeseos extends Model
         
     }
 
+    public function getconfirAsistencia($uid)
+    {
+        try{
+            $query = $this->db->prepare("SELECT uid FROM asistencia where uid=:uid  ORDER BY id DESC");
+            $query->execute(
+                ['uid'=>$uid]
+            );
+            return $query->fetch();
+        }catch(\PDOException $e){
+            return ['status'=>0,'error'=>true];
+        }
+        
+    }
+
 }
