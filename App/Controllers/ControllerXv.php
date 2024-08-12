@@ -3,14 +3,14 @@ namespace App\Controllers;
 
 use Core\View;
 use App\Model\ModelDeseos;
-
+use App\Config\env;
 class ControllerXv {
 
     public function store()
     {   
         if($_SERVER['REQUEST_METHOD']=="POST"){
             try {
-                $uid='123123123123123';
+                $uid=$_POST['huid'];
                 $deseos = new ModelDeseos();
                 $insert = $deseos->setasistencia($_POST,$uid);
                 echo json_encode(['status'=>true,],200);

@@ -1,3 +1,4 @@
+
 <body class="position-relative">
 	<!---- Modal msj ---->
 	<div id="modal_mensaje" class="modal">
@@ -70,7 +71,7 @@
 			<i class="fas fa-times"></i>
 		</div>
 		<div id="video" class="center-align">
-			<img class="img-invitacion" src="src/img/invitacion.png" alt="invitación">
+			<img class="img-invitacion" src="<?= $baseUrl ?>src/img/invitacion.png" alt="invitación">
 		</div>
 	</div>
 
@@ -96,7 +97,7 @@
 			<li><a class="btn-floating" onclick="playMusic()"><i class="fas fa-volume-up"></i></a></li>
 			<li><a class="btn-floating darken-1" onclick="stopMusic()"><i class="fas fa-volume-mute"></i></a></li>
 		</ul>
-		<audio id="player" src="src/audio/song.mp3" autoplay></audio>
+		<audio id="player" src="<?= $baseUrl ?>src/audio/song.mp3" autoplay></audio>
 	</div>
 
 	<!-- SIDEBAR -->
@@ -189,7 +190,7 @@
 	<!-- PARALLAX 1 -->
 	<div class="parallax-container center valign-wrapper z-depth-4">
 		<div class="parallax parallaxlast2" style="transform: scale(.35) translateY(-15%) !important;">
-			<img src="src/img/save-the-date/IMG_7386.jpg" loading="lazy">
+			<img src="<?= $baseUrl ?>src/img/save-the-date/IMG_7386.jpg" loading="lazy">
 		</div>
 		<div class="container white-text">
 			<div class="row">
@@ -202,7 +203,7 @@
 
 	<!-- EL GRAN DÍA -->
 	<div class="d-flex flex-column align-items-center py-10 bg-two px-3" id="section_gran_dia" data-aos="fade-up" data-aos-duration="1500">
-		<img src="src/img/elementos/iglesia_dorada.png" />
+		<img src="<?= $baseUrl ?>src/img/elementos/iglesia_dorada.png" />
 		<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
 			Ceremonia 4:00 pm
 		</p>
@@ -217,7 +218,7 @@
 				href="#modal_ceremonia"
 				class="block w-auto waves-effect waves-dark btn-small bg-buttons modal-trigger bg-rosa20 text-white mt-5">Ver mapa</a>
 		</p>
-		<img src="src/img/elementos/elemento_stephy.png" data-aos="fade-up" data-aos-duration="1500" />
+		<img src="<?= $baseUrl ?>src/img/elementos/elemento_stephy.png" data-aos="fade-up" data-aos-duration="1500" />
 		<!--recepcion!-->
 		<div data-aos="fade-up" data-aos-duration="1500">
 			<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
@@ -242,7 +243,7 @@
 	<!-- PARALLAX 2 -->
 	<div class="parallax-container center valign-wrapper z-depth-4">
 		<div class="parallax parallaxlast2" style="transform: scale(.35) translateY(-15%) !important;">
-			<img src="src/img/save-the-date/IMG_7348.jpg" loading="lazy">
+			<img src="<?= $baseUrl ?>src/img/save-the-date/IMG_7348.jpg" loading="lazy">
 		</div>
 		<div class="container white-text">
 			<div class="row">
@@ -269,7 +270,7 @@
 	<!-- PARALLAX 3 -->
 	<div class="parallax-container center valign-wrapper z-depth-4">
 		<div class="parallax parallaxlast2" style="transform: scale(.35) translateY(-15%) !important;">
-			<img src="src/img/save-the-date/IMG_7760.jpg" loading="lazy">
+			<img src="<?= $baseUrl ?>src/img/save-the-date/IMG_7760.jpg" loading="lazy">
 		</div>
 		<div class="container white-text">
 			<div class="row">
@@ -291,7 +292,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_2.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_2.jpg" />
 						</div>
 					</div>
 					<div class="flex w-1/3 flex-wrap">
@@ -299,7 +300,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_3.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_3.jpg" />
 						</div>
 					</div>
 					<div class="flex w-1/3 flex-wrap">
@@ -307,7 +308,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_21.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_21.jpg" />
 						</div>
 					</div>
 					<div class="flex w-1/3 flex-wrap">
@@ -323,7 +324,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_51.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_51.jpg" />
 						</div>
 					</div>
 					<div class="flex w-1/3 flex-wrap">
@@ -331,7 +332,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_77.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_77.jpg" />
 						</div>
 					</div>
 
@@ -348,7 +349,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_118.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_118.jpg" />
 						</div>
 					</div>
 					<div class="flex w-1/3 flex-wrap">
@@ -356,7 +357,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_135.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_135.jpg" />
 						</div>
 					</div>
 					<div class="flex w-1/3 flex-wrap">
@@ -372,7 +373,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_165.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_165.jpg" />
 						</div>
 					</div>
 					<div class="flex w-1/3 flex-wrap">
@@ -380,7 +381,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_184.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_184.jpg" />
 						</div>
 					</div>
 				</div>
@@ -395,7 +396,7 @@
 					<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
 						Código de Vestimenta
 					</p>
-					<img src="src/img/elementos/formal_dresscode_Icono_02.png" data-aos="fade-up" data-aos-duration="1500">
+					<img src="<?= $baseUrl ?>src/img/elementos/formal_dresscode_Icono_02.png" data-aos="fade-up" data-aos-duration="1500">
 
 					<p class="text-center  mt-3 text-3xl rosa20" data-aos="fade-up" data-aos-duration="1500">
 						Formal
@@ -517,8 +518,8 @@
 	</div>
 
 	<!-- WEDDING PLANER -->
-	<div class="py-10 bg-one " id="section_asistencia">
-		<div class="container" data-aos="fade-up" data-aos-duration="1500">
+	<div class="py-10 bg-one " id="section_asistencia" data-aos="fade-up" data-aos-duration="1500">
+		<div class="container" >
 			<!--Botones!-->
 			<div class="">
 				<!--Fin checkbox!-->
@@ -559,7 +560,9 @@
 						<form class="mxl:w-1/2 2xl:w-1/2 m-auto hidden" action="<?= $baseUrl ?>ControllerXv/store" method="POST" autocomplete="off" name="asistencia" id="asistencia">
 							<div class="relative z-0 w-full mb-5 group">
 								<label for="invitado" class="font-Georgia text-white text-3xl">Nombre del invitado</label><br />
+								<input type="hidden" name="huid" value="<?php echo isset($_GET['invitado'])? $invitado->uid:'' ?>">
 								<input type="text" name="nombre" id="Firstname"
+									value="<?php echo isset($_GET['invitado'])? $invitado->Nombre:'' ?>"
 									style="border-bottom: white 1px solid!important;"
 									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required />
 
@@ -579,11 +582,12 @@
 									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required />
 
 							</div>
+							
 							<button type="submit" class="bg-rosa20  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Confirmar</button>
 						</form>
 					</div>
 					<div class="flex justify-center">
-						<img src="src/img/elementos/elemento_stephy.png" data-aos="fade-up" data-aos-duration="1500" />
+						<img src="<?= $baseUrl ?>src/img/elementos/elemento_stephy.png" data-aos="fade-up" data-aos-duration="1500" />
 					</div>
 				</div>
 			</div>

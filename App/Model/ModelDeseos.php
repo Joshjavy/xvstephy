@@ -40,4 +40,18 @@ class ModelDeseos extends Model
         
     }
 
+    public function getinvitado($uid)
+    {
+        try{
+            $query = $this->db->prepare("SELECT Nombre, uid FROM invitados where uid=:uid  ORDER BY id DESC");
+            $query->execute(
+                ['uid'=>$uid]
+            );
+            return $query->fetch();
+        }catch(\PDOException $e){
+            return ['status'=>0,'error'=>true];
+        }
+        
+    }
+
 }
