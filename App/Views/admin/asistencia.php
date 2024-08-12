@@ -21,10 +21,10 @@ if (!isset($_SESSION['loggedin'])) {
 <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>nombre</th>
-                <th>url</th>
+                <th>Nombre</th>
+                <th>Url</th>
                 <th>Alergia</th>
-                <th>pases</th>
+                <th>Pases</th>
             </tr>
         </thead>
         <tbody>

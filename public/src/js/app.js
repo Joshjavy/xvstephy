@@ -4,6 +4,7 @@ const morePhotos = document.querySelector('#morePhotos')
 const photos = document.querySelectorAll('[data-photos]')
 const sideBar = document.querySelector('#iconArrow')
 const sideBarSmall = document.querySelector('#iconHamburguer')
+let audio = document.getElementById("player"); 
 
 $(document).ready(function(){
   $('.sidenav').sidenav();
@@ -37,8 +38,36 @@ document.addEventListener("DOMContentLoaded", function(){
   // if(sideBar){
   //   sideBar.addEventListener('mouseover', openSideBar)
   // }
-
+  
 });
+
+//Obtenemos elemento de la musica
+//Contador para determinar cuantos clics hacen en la página, si hacen más de 1 ya no se reproducirá la musica en automatico
+var contador_clics = 0;
+
+//Si presionamos en cualquier parte de la página se reproducira la musica solo si el contador es = 0
+$(document).on('click', 'body', function(evento)
+{
+    //Si el contador es = 0 entonces reproducimos la musica en automatico, sino solo hasta que presionen el icono
+    if(contador_clics === 0)
+    {
+      if (!$(evento.target).closest('.pausarAudio').length) 
+      {
+        playAudio();
+        contador_clics++;
+      }
+    }
+});
+
+//Funciones que se activan con un evento para pausar y reproducir la musica 
+function playAudio() 
+{ 
+  audio.play(); 
+} 
+function pauseAudio() 
+{ 
+  audio.pause(); 
+} 
 
 const openSideBar = e => {
   $('.sidenav').sidenav('open')

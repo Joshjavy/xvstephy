@@ -29,8 +29,6 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 
 -- Volcando datos para la tabla xvstephy.accounts: ~1 rows (aproximadamente)
-INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
-	(1, 'Wedding', '$2y$10$zFYu4s10tvDu/ob0o.NNIe4/votx6cG517ADeEHQjAfbtvFx0sZ3G', 'mysouvenirsproject@gmail.com');
 
 -- Volcando estructura para tabla xvstephy.asistencia
 CREATE TABLE IF NOT EXISTS `asistencia` (

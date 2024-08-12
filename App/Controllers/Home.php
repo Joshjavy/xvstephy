@@ -90,7 +90,8 @@ class Home
 
                 // Insertando información
                 foreach ($rows as $r) {
-                    if ($db->setInvitados($r[0]) == false) {
+                    $pase=isset($r[1])? $r[1]:'';
+                    if ($db->setInvitados($r[0],$pase) == false) {
                         $errors++;
                         continue;
                     }

@@ -97,20 +97,21 @@
 			<li><a class="btn-floating" onclick="playMusic()"><i class="fas fa-volume-up"></i></a></li>
 			<li><a class="btn-floating darken-1" onclick="stopMusic()"><i class="fas fa-volume-mute"></i></a></li>
 		</ul>
-		<audio id="player" src="<?= $baseUrl ?>src/audio/song.mp3" autoplay></audio>
+		<audio id="player" class="d-none" preload="auto" autoplay loop>
+			<source src="<?= $baseUrl ?>src/audio/song.mp3" type="audio/mp3">
+		</audio>
 	</div>
 
 	<!-- SIDEBAR -->
 	<ul class="sidenav sidenav-close" id="mobile-demo">
 		<li class="li_inicio"><a href="#">INICIO</a></li>
-		<li class="li_cont"><a href="#" class="linkdata" data-enlace="section_gran_dia">EL GRAN DÍA</a></li>
-		<li class="li_cont"><a href="#" class="linkdata" data-enlace="section_mesa">REGALO DE MATRIMONIO</a></li>
-		<li class="li_cont"><a href="#" class="linkdata" data-enlace="section_como_llegar">COMO LLEGAR</a></li>
-		<li class="li_cont"><a href="#" class="linkdata" data-enlace="section_hospedaje">HOSPEDAJE</a></li>
-		<li class="li_cont"><a href="#" class="linkdata" data-enlace="section_evento">EVENTOS</a></li>
-		<li class="li_cont"><a href="#" class="linkdata" data-enlace="section_dresscode">DRESS CODE</a></li>
-		<li class="li_cont"><a href="#" class="linkdata" data-enlace="section_comentarios">LIBRO DE FIRMAS</a></li>
-		<li class="li_cont"><a href="#" class="linkdata" data-enlace="section_asistencia">ASISTENCIA</a></li>
+		<li class="li_cont uppercase"><a href="#" class="linkdata" data-enlace="Mis_Padres">Mis Padres</a></li>
+		<li class="li_cont uppercase"><a href="#" class="linkdata" data-enlace="Ceremonia">Ceremonia</a></li>
+		<li class="li_cont uppercase"><a href="#" class="linkdata" data-enlace="Cronograma">Cronograma</a></li>
+		<li class="li_cont uppercase"><a href="#" class="linkdata" data-enlace="galeria">GALERÍA</a></li>
+		<li class="li_cont uppercase"><a href="#" class="linkdata" data-enlace="Codigo_de_Vestimenta">Código de Vestimenta</a></li>
+		<li class="li_cont uppercase"><a href="#" class="linkdata" data-enlace="Mesa_de_regalos">Mesa de regalos</a></li>
+		<li class="li_cont uppercase"><a href="#" class="linkdata" data-enlace="Mesa_de_regalos">ASISTENCIA</a></li>
 	</ul>
 
 	<a href="#" id="iconHamburguer" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only">
@@ -134,7 +135,7 @@
 	</div>
 
 	<!-- POST IT -->
-	<div class="py-10 bg-one" id="section_ubication">
+	<div class="py-10 bg-one" id="Mis_Padres">
 		<div class="container-fluid">
 			<div class="row justify-content-center">
 				<div class="col-md-5 d-flex flex-column align-items-center sm:text-lg  text-base md:text-base	 lg:text-lg 2xl:text-3xl 2xl:text-3xl px-5 text-center"  data-aos="fade-up" data-aos-duration="1500">
@@ -202,7 +203,7 @@
 	</div>
 
 	<!-- EL GRAN DÍA -->
-	<div class="d-flex flex-column align-items-center py-10 bg-two px-3" id="section_gran_dia" data-aos="fade-up" data-aos-duration="1500">
+	<div class="d-flex flex-column align-items-center py-10 bg-two px-3" id="Ceremonia" data-aos="fade-up" data-aos-duration="1500">
 		<img src="<?= $baseUrl ?>src/img/elementos/iglesia_dorada.png" />
 		<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
 			Ceremonia 4:00 pm
@@ -255,18 +256,21 @@
 	</div>
 
 	<!-- MESA DE REGALOS -->
-	<div class="center-align bg-three py-10" id="section_mesa" data-aos="fade-up" data-aos-duration="1500">
+	<div class="center-align bg-three py-10" id="Cronograma" data-aos="fade-up" data-aos-duration="1500">
 		<div class="container">
 
 			<div class="row justify-content-center pb-10">
 				<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
 					Cronograma
 				</p>
+				
 			</div>
 
 		</div>
 	</div>
-
+<div class="sm:w-full md:w-full lg:w-1/2 2xl:w-1/2 2xl:w-1/2 m-auto px-5" data-aos="fade-up" data-aos-duration="1500">
+<img src="<?= $baseUrl ?>src/img/elementos/Cronograma_XV_stephy.png" loading="lazy">
+</div>
 	<!-- PARALLAX 3 -->
 	<div class="parallax-container center valign-wrapper z-depth-4">
 		<div class="parallax parallaxlast2" style="transform: scale(.35) translateY(-15%) !important;">
@@ -282,7 +286,7 @@
 	</div>
 
 	<!-- HOSPEDAJE -->
-	<div class="d-flex flex-column py-10" data-aos="fade-up" data-aos-duration="1500">
+	<div class="d-flex flex-column py-10" data-aos="fade-up" data-aos-duration="1500" id="galeria">
 		<!--Galeria!-->
 		<div>
 			<div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
@@ -316,7 +320,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_26.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_26.jpg" />
 						</div>
 					</div>
 					<div class="flex w-1/3 flex-wrap">
@@ -365,7 +369,7 @@
 							<img
 								alt="gallery"
 								class="block h-full w-full rounded-lg object-cover object-center"
-								src="src/img/galeria/Sesion_Stephy_149.jpg" />
+								src="<?= $baseUrl ?>src/img/galeria/Sesion_Stephy_149.jpg" />
 						</div>
 					</div>
 					<div class="flex w-1/3 flex-wrap">
@@ -389,7 +393,7 @@
 
 		</div>
 		<!--Fin galeria!-->
-		<div class="container" id="section_como_llegar">
+		<div class="container" id="Codigo_de_Vestimenta">
 
 			<div class="row justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1500">
 				<div class="col-12 col-md-10 d-flex flex-column align-items-center">
@@ -432,7 +436,7 @@
 	<!-- </div> -->
 
 	<!-- HASHTAG -->
-	<div class="d-flex flex-column py-10 bg-one sm:text-lg  text-base md:text-base	 lg:text-lg 2xl:text-3xl 2xl:text-3xl px-5 text-center" id="section_hashtag" data-aos="fade-up" data-aos-duration="1500">
+	<div class="d-flex flex-column py-10 bg-one sm:text-lg  text-base md:text-base	 lg:text-lg 2xl:text-3xl 2xl:text-3xl px-5 " id="Mesa_de_regalos" data-aos="fade-up" data-aos-duration="1500">
 		<div class="d-flex flex-column align-items-center justify-content-center">
 			<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
 				Mesa de regalos
@@ -447,8 +451,85 @@
 					Clabe 0725 4001 2830 1745 56<br />
 				</p>
 			</div>
-			<div>
 
+
+			<div class="mt-20" id="section_asistencia" data-aos="fade-up" data-aos-duration="1500">
+				<div class="container" >
+			<!--Botones!-->
+			<div class="">
+				<!--Fin checkbox!-->
+
+				<p class="text-center text-3xl">Asistiré</p>
+			<div class=" w-full flex justify-center gap-8 pt-10">
+				<div>
+					<input class="hidden asiste" id="radio_1" type="radio" name="radio" value="1">
+					<label
+						class="  flex justify-center   w-10	h-10 border-2 border-white cursor-pointer rounded-full text-white "
+						style="background-color: #905F68;"
+						for="radio_1">
+						<span class=" font-semibold textcheckbox">Si</span>
+					</label>
+				</div>
+
+				<div>
+					<input class="hidden asiste" id="radio_2" type="radio" name="radio" value="2">
+					<label
+						class=" flex justify-center   w-10	h-10 border-2 border-white cursor-pointer rounded-full  text-white"
+						style="background-color: #905F68;"
+						for="radio_2">
+						<span class=" font-semibold textcheckbox">NO</span>
+					</label>
+				</div>
+
+
+				
+			</div>
+			<!--Fin checkbox!-->
+
+
+			</div>
+			<!--Fin de botones!-->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="flex justify-center" >
+						<form class="mxl:w-1/2 2xl:w-1/2 m-auto hidden pt-10" action="<?= $baseUrl ?>ControllerXv/store" method="POST" autocomplete="off" name="asistencia" id="asistencia">
+							<div class="relative z-0 w-full mb-5 group">
+								<label for="invitado" class="font-Georgia text-white text-3xl" style="text-align: left!important;">Nombre del invitado</label><br />
+								<input type="hidden" name="huid" value="<?php echo isset($_GET['invitado'])? $invitado->uid:'' ?>">
+								<input type="text" name="nombre" id="Firstname"
+									readonly
+									value="<?php echo isset($_GET['invitado'])? ($invitado?$invitado->Nombre:''):'' ?>"
+									style="border-bottom: white 1px solid!important;"
+									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required />
+
+							</div>
+							<div class="relative z-0 w-full mb-5 group">
+								<label for="pases" class="font-Georgia text-white text-3xl">#pases</label><br />
+								<input type="text" min="1" name="pases" id="pases"
+									readonly
+									value="<?php echo isset($_GET['invitado'])? ($invitado?$invitado->pases:''):'' ?>"
+									style="border-bottom: white 1px solid!important;"
+									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required />
+
+							</div>
+
+							<div class="relative z-0 w-full mb-5 group">
+								<label for="Alergias" class="font-Georgia text-white text-3xl">Alergias</label><br />
+								<input type="text" name="Alergias" id="Alergias"
+									style=" border-bottom: white 1px solid!important;"
+									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " />
+
+							</div>
+							
+							<button type="submit" class="bg-rosa20  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Confirmar</button>
+						</form>
+					</div>
+					<div class="flex justify-center">
+						<img src="<?= $baseUrl ?>src/img/elementos/elemento_stephy.png" data-aos="fade-up" data-aos-duration="1500" />
+					</div>
+				</div>
+			</div>
+		</div>
 			</div>
 		</div>
 	</div>
@@ -518,81 +599,9 @@
 	</div>
 
 	<!-- WEDDING PLANER -->
-	<div class="py-10 bg-one " id="section_asistencia" data-aos="fade-up" data-aos-duration="1500">
-		<div class="container" >
-			<!--Botones!-->
-			<div class="">
-				<!--Fin checkbox!-->
-
-				<p class="text-center text-3xl">Asistire</p>
-			<div class=" w-full flex justify-center gap-8 pt-10">
-				<div>
-					<input class="hidden asiste" id="radio_1" type="radio" name="radio" value="1">
-					<label
-						class="  flex justify-center   w-10	h-10 border-2 border-white cursor-pointer rounded-full pt-2 text-white "
-						style="background-color: #905F68;"
-						for="radio_1">
-						<span class=" font-semibold textcheckbox">Si</span>
-					</label>
-				</div>
-
-				<div>
-					<input class="hidden asiste" id="radio_2" type="radio" name="radio" value="2">
-					<label
-						class=" flex justify-center   w-10	h-10 border-2 border-white cursor-pointer rounded-full pt-2 text-white"
-						style="background-color: #905F68;"
-						for="radio_2">
-						<span class=" font-semibold textcheckbox">NO</span>
-					</label>
-				</div>
-
-
-				
-			</div>
-			<!--Fin checkbox!-->
-
-
-			</div>
-			<!--Fin de botones!-->
-			<div class="row">
-				<div class="col-md-12">
-					<div class="flex justify-center" >
-						<form class="mxl:w-1/2 2xl:w-1/2 m-auto hidden" action="<?= $baseUrl ?>ControllerXv/store" method="POST" autocomplete="off" name="asistencia" id="asistencia">
-							<div class="relative z-0 w-full mb-5 group">
-								<label for="invitado" class="font-Georgia text-white text-3xl">Nombre del invitado</label><br />
-								<input type="hidden" name="huid" value="<?php echo isset($_GET['invitado'])? $invitado->uid:'' ?>">
-								<input type="text" name="nombre" id="Firstname"
-									value="<?php echo isset($_GET['invitado'])? $invitado->Nombre:'' ?>"
-									style="border-bottom: white 1px solid!important;"
-									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required />
-
-							</div>
-							<div class="relative z-0 w-full mb-5 group">
-								<label for="pases" class="font-Georgia text-white text-3xl">#pases</label><br />
-								<input type="number" min="1" name="pases" id="pases"
-									style="border-bottom: white 1px solid!important;"
-									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required />
-
-							</div>
-
-							<div class="relative z-0 w-full mb-5 group">
-								<label for="Alergias" class="font-Georgia text-white text-3xl">Alergias</label><br />
-								<input type="text" name="Alergias" id="Alergias"
-									style=" border-bottom: white 1px solid!important;"
-									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required />
-
-							</div>
-							
-							<button type="submit" class="bg-rosa20  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Confirmar</button>
-						</form>
-					</div>
-					<div class="flex justify-center">
-						<img src="<?= $baseUrl ?>src/img/elementos/elemento_stephy.png" data-aos="fade-up" data-aos-duration="1500" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<!-- <div class="py-10 bg-one " id="section_asistencia" data-aos="fade-up" data-aos-duration="1500">
+		
+	</div> -->
 	</main>
 
 	<!--Carga JS al final-->
@@ -608,3 +617,6 @@
 	<script type="text/javascript" src="<?= $baseUrl ?>src/js/aos.js"></script>
 	<script type="text/javascript" src="<?= $baseUrl ?>src/js/app.js"></script>
 	<script type="text/javascript" src="<?= $baseUrl ?>src/js/proyecto/actions.js"></script>
+	<script>
+		
+	</script>

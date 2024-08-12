@@ -22,7 +22,8 @@ if (!isset($_SESSION['loggedin'])) {
 		<table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>nombre</th>
+                <th>Nombre</th>
+                <th>Pases</th>
                 <th>url</th>
             </tr>
         </thead>
@@ -30,6 +31,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<?php foreach($datos as $invitado){?>
             <tr>
                 <td><?php echo  $invitado->Nombre ?></td>
+                <td><?php echo  $invitado->pases ?></td>
                 <td><?php echo $site.'?invitado='.$invitado->uid?></td>
                 
             </tr>
