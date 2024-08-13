@@ -4,8 +4,9 @@ session_start();
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: '.$baseUrl.'Home/login');
-	exit;
-}
+}else{
+
+
 ?>
 <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
   <div class="mb-2 sm:mb-0">
@@ -24,6 +25,7 @@ if (!isset($_SESSION['loggedin'])) {
             <tr>
                 <th>Nombre</th>
                 <th>Pases</th>
+                <th>Pases niños</th>
                 <th>url</th>
             </tr>
         </thead>
@@ -32,6 +34,7 @@ if (!isset($_SESSION['loggedin'])) {
             <tr>
                 <td><?php echo  $invitado->Nombre ?></td>
                 <td><?php echo  $invitado->pases ?></td>
+                <td><?php echo  $invitado->paseschildren ?></td>
                 <td><?php echo $site.'?invitado='.$invitado->uid?></td>
                 
             </tr>
@@ -63,3 +66,4 @@ if (!isset($_SESSION['loggedin'])) {
 <script>
 	new DataTable('#example');
 </script>
+<?php } ?>

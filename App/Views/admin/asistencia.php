@@ -4,9 +4,11 @@ session_start();
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: '.$baseUrl.'Home/login');
-	exit;
-}
+}else{
+
+
 ?>
+<body>
 <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
   <div class="mb-2 sm:mb-0">
   </div>
@@ -22,25 +24,26 @@ if (!isset($_SESSION['loggedin'])) {
         <thead>
             <tr>
                 <th>Nombre</th>
+                
+                <th>Pases adultos</th>
+                <th>Pases niños</th>
                 <th>Url</th>
-                <th>Alergia</th>
-                <th>Pases</th>
+                
             </tr>
         </thead>
         <tbody>
 		<?php foreach($datos as $invitado){?>
             <tr>
                 <td><?php echo  $invitado->Nombre ?></td>
-                <td><?php echo $site.'?invitado='.$invitado->uid?></td>
-                <td><?php echo $invitado->alergia?></td>
                 <td><?php echo $invitado->pases?></td>
+                <td><?php echo $invitado->paseschildren?></td>
+                <td><?php echo $site.'?invitado='.$invitado->uid?></td>
                 
             </tr>
         <?php } ?>
         </tbody>
     </table>
 </div>
-</main>
 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
@@ -54,3 +57,4 @@ if (!isset($_SESSION['loggedin'])) {
 <script>
 	new DataTable('#example');
 </script>
+<?php } ?>

@@ -85,7 +85,7 @@ $(document).ready(function(){
 /***** Para el contador del tiempo *****/
 
       // Introducir la fecha y hora
-      var countDownDate = new Date("Nov 26, 2022 12:00:00").getTime();
+      // var countDownDate = new Date("Nov 26, 2022 12:00:00").getTime();
 
       // Actualizar el contador cada segundo
       // var x = setInterval(function(){
@@ -406,3 +406,42 @@ function playMusic(){
 function stopMusic(){
   document.querySelector('#player').pause()
 }
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+*                                                                                                                                   
+* PARA EL CONTADOR DE LA WEB
+*
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+
+      //Si existe el elemento contador entonces lo inicializamos (fecha en ingles)
+      if( $("#timerCont").length)
+        {
+          //Obtenemos la fecha del evento
+          var countDownDate = new Date("Sep 14, 2024 16:00:00").getTime(); 
+          //Actualiza el contador cada segundo
+          var x = setInterval(function()  
+          {
+            //Obtenemos la fecha actual
+            var now = new Date().getTime();
+            //Obtenemos la diferencia entre la 2 fechas
+            var distance = countDownDate - now; 
+            //Calculamos el tiempo
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+            //Mostramos el tiempo de manera indivual en los elementos
+            document.getElementById("timerCont_dias").innerHTML = "<b>"+days + "</b><br>DÍAS";
+            document.getElementById("timerCont_horas").innerHTML = "<b>"+hours + "</b><br>HRS";
+            document.getElementById("timerCont_minutos").innerHTML = "<b>"+minutes + "</b><br>MIN";
+            document.getElementById("timerCont_segundos").innerHTML = "<b>"+seconds + "</b><br>SEG";
+  
+            // si ya finalizó el tiempo arrojamos el mensaje
+            if (distance < 0) 
+            {
+              clearInterval(x);
+              document.getElementById("timerCont").innerHTML = "¡¡Muchas felicidades!!";
+            }
+          }, 1000);
+        }

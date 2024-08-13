@@ -1,5 +1,4 @@
-
-<body class="position-relative">
+<body class="position-relative sm:text-2xl	 text-2xl	 md:text-2xl		 lg:text-lg 2xl:text-3xl 2xl:text-3xl" style="background-color: #905F68;">
 	<!---- Modal msj ---->
 	<div id="modal_mensaje" class="modal">
 		<div class="modal-content modal-content-msj"></div>
@@ -27,12 +26,12 @@
 				<span class="font-bold">Dirección:</span> Camino Tetecalita a la Quebradora, s/n Tetecalita, 62767 Emiliano Zapata, Mor.
 			</p> -->
 			<p class="text-left text-secondary text-base">
-				<span class="font-bold">Fecha y hora ceremonia:</span> 14 de Septiembre de 2024 a las 16:00 hrs.
+				<span class="font-bold">Fecha y hora ceremonia:</span> 14 de Septiembre de 2024 a las 16:00 PM.
 			</p>
 		</div>
 
 		<div class="modal-footer">
-			<a href="#!" class="modal-close block w-auto waves-effect waves-dark btn-small bg-buttons modal-trigger bg-third text-white">Cerrar</a>
+			<a href="#!" class="modal-close block w-auto waves-effect waves-dark btn-small bg-buttons modal-trigger bg-third text-white" style="background-color: #905F68!important;">Cerrar</a>
 		</div>
 	</div>
 
@@ -57,12 +56,12 @@
 				<span class="font-bold">Dirección:</span> Camino Tetecalita a la Quebradora, s/n Tetecalita, 62767 Emiliano Zapata, Mor.
 			</p> -->
 			<p class="text-left text-secondary text-base">
-				<span class="font-bold">Fecha y hora recepción:</span> 14 de Septiembre de 2024 a las 17:30 hrs.
+				<span class="font-bold">Fecha y hora recepción:</span> 14 de Septiembre de 2024 a las 17:30 PM.
 			</p>
 		</div>
 
 		<div class="modal-footer">
-			<a href="#!" class="modal-close block w-auto waves-effect waves-dark btn-small bg-buttons modal-trigger bg-third text-white">Cerrar</a>
+			<a href="#!" class="modal-close block w-auto waves-effect waves-dark btn-small bg-buttons modal-trigger bg-third text-white" style="background-color: #905F68!important;">Cerrar</a>
 		</div>
 	</div>
 	<!--!-->
@@ -84,18 +83,18 @@
 
 	<!-- Top button -->
 	<div class="fixed-action-btn">
-		<a class="btn-floating btn-large" id="top_body">
+		<a class="btn-floating btn-large" style="background-color:#905F68;" id="top_body">
 			<i class="fas fa-chevron-up"></i>
 		</a>
 	</div>
 
 	<div class="fixed-action-btn" style="margin-bottom: 5rem;">
-		<a class="btn-floating btn-large">
+		<a class="btn-floating btn-large" style="background-color:#905F68;">
 			<i class="fas fa-music"></i>
 		</a>
 		<ul>
-			<li><a class="btn-floating" onclick="playMusic()"><i class="fas fa-volume-up"></i></a></li>
-			<li><a class="btn-floating darken-1" onclick="stopMusic()"><i class="fas fa-volume-mute"></i></a></li>
+			<li><a class="btn-floating" style="background-color:#905F68;" onclick="playMusic()"><i class="fas fa-volume-up"></i></a></li>
+			<li><a class="btn-floating darken-1" style="background-color:#905F68;" onclick="stopMusic()"><i class="fas fa-volume-mute"></i></a></li>
 		</ul>
 		<audio id="player" class="d-none" preload="auto" autoplay loop>
 			<source src="<?= $baseUrl ?>src/audio/song.mp3" type="audio/mp3">
@@ -115,10 +114,10 @@
 	</ul>
 
 	<a href="#" id="iconHamburguer" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only">
-		<i class="fas fa-bars"></i>
+		<i class="fas fa-bars" style="background-color:#905f68"></i>
 	</a>
 
-	<a href="#" id="iconArrow" data-target="mobile-demo" class="sidenav-trigger hide-on-med-and-down btn-floating pulse">
+	<a href="#" id="iconArrow" data-target="mobile-demo" class="sidenav-trigger hide-on-med-and-down btn-floating pulse" style="background-color:#905f68">
 		<i class="fas fa-chevron-circle-right"></i>
 	</a>
 
@@ -136,9 +135,9 @@
 
 	<!-- POST IT -->
 	<div class="py-10 bg-one" id="Mis_Padres">
-		<div class="container-fluid">
+		<div class="container-fluid h-fit py-20">
 			<div class="row justify-content-center">
-				<div class="col-md-5 d-flex flex-column align-items-center sm:text-lg  text-base md:text-base	 lg:text-lg 2xl:text-3xl 2xl:text-3xl px-5 text-center"  data-aos="fade-up" data-aos-duration="1500">
+				<div class="col-md-5 d-flex flex-column align-items-center sm:text-lg  text-base md:text-base	 lg:text-lg 2xl:text-3xl 2xl:text-3xl px-5 text-center" data-aos="fade-up" data-aos-duration="1500">
 					<p class="">
 						Quince años de risas, alegría y momentos inolvidables.<br />
 						Únete a la celebración y se parte de mi historia
@@ -159,7 +158,7 @@
 
 			<div class="row justify-content-center">
 				<div class="col-md-5 d-flex flex-column align-items-center sm:text-lg  text-base md:text-base	 lg:text-lg 2xl:text-3xl 2xl:text-3xl px-5 text-center" data-aos="fade-up" data-aos-duration="1500">
-				<h1 class="text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl pt-10">
+					<h1 class="text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl pt-10">
 						Mis Padrinos
 					</h1>
 
@@ -190,40 +189,91 @@
 
 	<!-- PARALLAX 1 -->
 	<div class="parallax-container center valign-wrapper z-depth-4">
-		<div class="parallax parallaxlast2" style="transform: scale(.35) translateY(-15%) !important;">
+		<div class="parallax parallaxlast2 " style="transform: scale(1) translateY(-15%) !important;">
 			<img src="<?= $baseUrl ?>src/img/save-the-date/IMG_7386.jpg" loading="lazy">
 		</div>
 		<div class="container white-text">
 			<div class="row">
 				<div class="col s12">
-					<h2 class="text-white text-shadow"></h2>
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CONTADOR -->
+	<div data-aos="fade-up" data-aos-duration="1500">
+		<div class="contendor"  style="height: 150px; background-color: #905f68;  ">
+			<div class="container py-10">
+				<div class="flext justify-center">
+					<div class=" flext justify-center justify-contents-center ">
+						<div class="row inline-block align-middle" id="timerCont">
+							<div class="col s12 hide-on-med-and-up"></div>
+							<div class="col s3 m3 l3 ">
+								<span class="texto-imagenes text-3xl " id="timerCont_dias"></span>
+							</div>
+							<div class="col s3 m3 l3">
+								<span class="texto-imagenes text-3xl" id="timerCont_horas"></span>
+							</div>
+							<div class="col s3 m3 l3">
+								<span class="texto-imagenes text-3xl" id="timerCont_minutos"></span>
+							</div>
+							<div class="col s3 m3 l3">
+								<span class="texto-imagenes text-3xl" id="timerCont_segundos"></span>
+							</div>
+							<div class="col s12 hide-on-med-and-up"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<!-- CONTADOR -->
 	<!-- EL GRAN DÍA -->
-	<div class="d-flex flex-column align-items-center py-10 bg-two px-3" id="Ceremonia" data-aos="fade-up" data-aos-duration="1500">
-		<img src="<?= $baseUrl ?>src/img/elementos/iglesia_dorada.png" />
-		<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
-			Ceremonia 4:00 pm
+	<div class="d-flex flex-column align-items-center py-24 bg-two px-3" id="Ceremonia">
+		<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige mt-10" data-aos="fade-up" data-aos-duration="1500">
+			Detalles
+		</p>
+
+		<img src="<?= $baseUrl ?>src/img/elementos/iglesia_dorada.png" class="w-32 mt-10 mb-10	" data-aos="fade-up" data-aos-duration="1500" />
+		<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige" data-aos="fade-up" data-aos-duration="1500">
+			<!-- 2 columnas para aliminar Ceremonia y hr!-->
+			Ceremonia
+		</p>
+		<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl  beige mt-20" data-aos="fade-up" data-aos-duration="1500">
+			<span class="font-Georgia"> 4:00 pm</span>
+
 		</p>
 
 		<p class="text-center mt-10 sm:text-lg  text-base md:text-base	 lg:text-lg 2xl:text-3xl 2xl:text-3xl px-5 text-center" data-aos="fade-up" data-aos-duration="1500">
 			San Felipe de Jesús<br />
 			Isabel Días Abundis y José Luis Ceciliano Meza<br />
 			<!--Link mapa pendiente!-->
-			<a
-				data-aos="fade-up"
-				data-aos-duration="1500"
-				href="#modal_ceremonia"
-				class="block w-auto waves-effect waves-dark btn-small bg-buttons modal-trigger bg-rosa20 text-white mt-5">Ver mapa</a>
+
 		</p>
+		<div class="flex justufy-center">
+			<span>
+				<a
+					data-aos="fade-up"
+					data-aos-duration="1500"
+					href="#modal_ceremonia"
+					class="block w-fit waves-effect waves-dark btn-small  modal-trigger bg-rosa20 text-white mt-5" style="background-color: #905F68!important;">Ver mapa</a>
+			</span>
+
+		</div>
 		<img src="<?= $baseUrl ?>src/img/elementos/elemento_stephy.png" data-aos="fade-up" data-aos-duration="1500" />
 		<!--recepcion!-->
 		<div data-aos="fade-up" data-aos-duration="1500">
-			<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
-				Recepción 5:30 pm
+			<!-- 2 columnas para aliminar receocion y hr!-->
+			<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige " data-aos="fade-up" data-aos-duration="1500">
+				Recepción
+			</p>
+			<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl  beige mt-20" data-aos="fade-up" data-aos-duration="1500">
+				<span class="font-Georgia"> 5:30 pm</span>
+
 			</p>
 
 
@@ -231,19 +281,22 @@
 				Salón La Vila<br />
 				Av. Emiliano Zapata 108, Miguel Hidalgo, 62556 Jiutepec, Mor.<br />
 				<!--Link mapa pendiente!-->
+
+			</p>
+			<p class="text-center flex justify-center">
 				<a
 					data-aos="fade-up"
 					data-aos-duration="1500"
 					href="#modal_recepcion"
-					class="block w-auto waves-effect waves-dark btn-small bg-buttons modal-trigger bg-rosa20 text-white mt-5">Ver mapa</a>
-			</p>
+					class="block w-fit waves-effect waves-dark btn-small bg-buttons modal-trigger bg-rosa20 text-white mt-5" style="background-color: #905F68!important;">Ver mapa</a>
 
+			</p>
 		</div>
 	</div>
 
 	<!-- PARALLAX 2 -->
 	<div class="parallax-container center valign-wrapper z-depth-4">
-		<div class="parallax parallaxlast2" style="transform: scale(.35) translateY(-15%) !important;">
+		<div class="parallax parallaxlast2" style="transform: scale(1) translateY(-15%) !important;">
 			<img src="<?= $baseUrl ?>src/img/save-the-date/IMG_7348.jpg" loading="lazy">
 		</div>
 		<div class="container white-text">
@@ -255,25 +308,41 @@
 		</div>
 	</div>
 
+	<!-- <div class="parallax-container center valign-wrapper z-depth-4">
+		<div class="parallax parallaxlast2" style="transform: scale(.35) translateY(-15%) !important;">
+			<img src="<?= $baseUrl ?>src/img/save-the-date/IMG_7348.jpg" loading="lazy">
+		</div>
+		<div class="container white-text">
+			<div class="row">
+				<div class="col s12">
+					<h2 class="text-white text-shadow"></h2>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
 	<!-- MESA DE REGALOS -->
-	<div class="center-align bg-three py-10" id="Cronograma" data-aos="fade-up" data-aos-duration="1500">
-		<div class="container">
+	<div class="center-align bg-three py-10" id="Cronograma">
+		<div class="container" data-aos="fade-up" data-aos-duration="1500">
 
 			<div class="row justify-content-center pb-10">
 				<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
 					Cronograma
 				</p>
-				
+
 			</div>
 
 		</div>
 	</div>
-<div class="sm:w-full md:w-full lg:w-1/2 2xl:w-1/2 2xl:w-1/2 m-auto px-5" data-aos="fade-up" data-aos-duration="1500">
-<img src="<?= $baseUrl ?>src/img/elementos/Cronograma_XV_stephy.png" loading="lazy">
-</div>
+	<div style="background-color: #905F68;">
+		<div class="sm:w-full md:w-full lg:w-1/2 2xl:w-1/2 2xl:w-1/2 m-auto px-5" data-aos="fade-up" data-aos-duration="1500">
+			<img src="<?= $baseUrl ?>src/img/elementos/Cronograma_XV_stephy.png" class="w-3/4		 m-auto" loading="lazy">
+		</div>
+	</div>
+
 	<!-- PARALLAX 3 -->
 	<div class="parallax-container center valign-wrapper z-depth-4">
-		<div class="parallax parallaxlast2" style="transform: scale(.35) translateY(-15%) !important;">
+		<div class="parallax parallaxlast2" style="transform: scale(1) translateY(-15%) !important;">
 			<img src="<?= $baseUrl ?>src/img/save-the-date/IMG_7760.jpg" loading="lazy">
 		</div>
 		<div class="container white-text">
@@ -286,9 +355,9 @@
 	</div>
 
 	<!-- HOSPEDAJE -->
-	<div class="d-flex flex-column py-10" data-aos="fade-up" data-aos-duration="1500" id="galeria">
+	<div class="d-flex flex-column py-10" id="galeria" style="background-color: #905F68;">
 		<!--Galeria!-->
-		<div>
+		<div data-aos="fade-up" data-aos-duration="1500">
 			<div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
 				<div class="-m-1 flex flex-wrap md:-m-2">
 					<div class="flex w-1/3 flex-wrap">
@@ -396,16 +465,17 @@
 		<div class="container" id="Codigo_de_Vestimenta">
 
 			<div class="row justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1500">
-				<div class="col-12 col-md-10 d-flex flex-column align-items-center">
-					<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
+				<div class="col-12 col-md-10 d-flex flex-column align-items-center py-10">
+					<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige py-10">
 						Código de Vestimenta
 					</p>
-					<img src="<?= $baseUrl ?>src/img/elementos/formal_dresscode_Icono_02.png" data-aos="fade-up" data-aos-duration="1500">
-
-					<p class="text-center  mt-3 text-3xl rosa20" data-aos="fade-up" data-aos-duration="1500">
+					<p class="text-center  mt-3 text-3xl text-white" data-aos="fade-up" data-aos-duration="1500">
 						Formal
 						<!--Link mapa pendiente!-->
 					</p>
+					<img src="<?= $baseUrl ?>src/img/elementos/formal_dresscode_Icono_02.png" class="w-44" data-aos="fade-up" data-aos-duration="1500">
+
+
 				</div>
 			</div>
 		</div>
@@ -436,16 +506,16 @@
 	<!-- </div> -->
 
 	<!-- HASHTAG -->
-	<div class="d-flex flex-column py-10 bg-one sm:text-lg  text-base md:text-base	 lg:text-lg 2xl:text-3xl 2xl:text-3xl px-5 " id="Mesa_de_regalos" data-aos="fade-up" data-aos-duration="1500">
+	<div class="d-flex flex-column py-10 bg-one sm:text-lg  text-base md:text-base	 lg:text-lg 2xl:text-3xl 2xl:text-3xl px-5 " id="Mesa_de_regalos">
 		<div class="d-flex flex-column align-items-center justify-content-center">
-			<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige">
+			<p class="text-center flex justify-center text-3xl	 sm:text-3xl md:text-3xl	 lg:text-3xl 2xl:text-6xl 2xl:text-6xl fonttitle beige py-10" data-aos="fade-up" data-aos-duration="1500">
 				Mesa de regalos
 			</p>
 			<div class="">
 				<p class="text-center  mt-20 " data-aos="fade-up" data-aos-duration="1500">
 					Nuestro mejor regalo es su presencia, <br /> pero si desean aportar con mi deseo de ahorrar <br />les doy las gracias por adelantado.
 				</p>
-				<p class="text-center  mt-20 " data-aos="fade-up" data-aos-duration="1500">
+				<p class="text-center  mt-20 rosa20 " data-aos="fade-up" data-aos-duration="1500">
 					Banorte<br />
 					Stephanie Yamilet Sanchez Contreras<br />
 					Clabe 0725 4001 2830 1745 56<br />
@@ -454,82 +524,123 @@
 
 
 			<div class="mt-20" id="section_asistencia" data-aos="fade-up" data-aos-duration="1500">
-				<div class="container" >
-			<!--Botones!-->
-			<div class="">
-				<!--Fin checkbox!-->
+				<div class="container">
+					<!--Botones!-->
+					<div class="">
+						<!--Fin checkbox!-->
+						<p class="text-center text-4xl	">
+							Confirmación de asistencia
+						</p>
+						<p class="text-center text-3xl mt-10">
+							<?php echo isset($_GET['invitado']) ? ($invitado ? 'Familia ' . $invitado->Nombre : '') : '' ?>
 
-				<p class="text-center text-3xl">Asistiré</p>
-			<div class=" w-full flex justify-center gap-8 pt-10">
-				<div>
-					<input class="hidden asiste" id="radio_1" type="radio" name="radio" value="1">
-					<label
-						class="  flex justify-center   w-10	h-10 border-2 border-white cursor-pointer rounded-full text-white "
-						style="background-color: #905F68;"
-						for="radio_1">
-						<span class=" font-semibold textcheckbox">Si</span>
-					</label>
-				</div>
-
-				<div>
-					<input class="hidden asiste" id="radio_2" type="radio" name="radio" value="2">
-					<label
-						class=" flex justify-center   w-10	h-10 border-2 border-white cursor-pointer rounded-full  text-white"
-						style="background-color: #905F68;"
-						for="radio_2">
-						<span class=" font-semibold textcheckbox">NO</span>
-					</label>
-				</div>
-
-
-				
-			</div>
-			<!--Fin checkbox!-->
-
-
-			</div>
-			<!--Fin de botones!-->
-			<div class="row">
-				<div class="col-md-12">
-					<div class="flex justify-center" >
-						<form class="mxl:w-1/2 2xl:w-1/2 m-auto hidden pt-10" action="<?= $baseUrl ?>ControllerXv/store" method="POST" autocomplete="off" name="asistencia" id="asistencia">
-							<div class="relative z-0 w-full mb-5 group">
-								<label for="invitado" class="font-Georgia text-white text-3xl" style="text-align: left!important;">Nombre del invitado</label><br />
-								<input type="hidden" name="huid" value="<?php echo isset($_GET['invitado'])? $invitado->uid:'' ?>">
-								<input type="text" name="nombre" id="Firstname"
-									readonly
-									value="<?php echo isset($_GET['invitado'])? ($invitado?$invitado->Nombre:''):'' ?>"
-									style="border-bottom: white 1px solid!important;"
-									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required />
-
-							</div>
-							<div class="relative z-0 w-full mb-5 group">
-								<label for="pases" class="font-Georgia text-white text-3xl">#pases</label><br />
-								<input type="text" min="1" name="pases" id="pases"
-									readonly
-									value="<?php echo isset($_GET['invitado'])? ($invitado?$invitado->pases:''):'' ?>"
-									style="border-bottom: white 1px solid!important;"
-									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required />
-
+						</p>
+						<div class=" w-full flex justify-center gap-8 pt-10">
+							<div>
+								<input class="hidden asiste" id="radio_1" type="radio" name="radio" value="1">
+								<label
+									class="  flex justify-center   w-10	h-10 border-2 border-white cursor-pointer rounded-full text-white "
+									style="background-color: #905F68;"
+									for="radio_1">
+									<span class=" font-semibold textcheckbox">Si</span>
+								</label>
 							</div>
 
-							<div class="relative z-0 w-full mb-5 group">
+							<div>
+								<input class="hidden asiste" id="radio_2" type="radio" name="radio" value="2">
+								<label
+									class=" flex justify-center   w-10	h-10 border-2 border-white cursor-pointer rounded-full  text-white"
+									style="background-color: #905F68;"
+									for="radio_2">
+									<span class=" font-semibold textcheckbox">NO</span>
+								</label>
+							</div>
+
+
+
+						</div>
+						<!--Fin checkbox!-->
+
+
+					</div>
+					<!--Fin de botones!-->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="flex justify-center">
+								<form class="mxl:w-1/2 2xl:w-1/2 m-auto  pt-10 hidden" action="<?= $baseUrl ?>ControllerXv/store" method="POST" autocomplete="off" name="asistencia" id="asistencia">
+									<!-- <div class="relative z-0 w-full mb-5 group">
+								<label for="invitado" class="font-Georgia text-white text-3xl" style="text-align: left!important;">Nombre del invitado</label><br /> -->
+									<input type="hidden" name="huid" value="<?php echo isset($_GET['invitado']) ? $invitado->uid : '' ?>">
+									<input type="hidden" name="nombre" id="Firstname"
+										value="<?php echo isset($_GET['invitado']) ? ($invitado ? $invitado->Nombre : '') : '' ?>" />
+
+									<!-- </div> -->
+									<div class="w-full mb-5">
+										<label for="pases" class="font-Georgia text-white text-3xl">#pases adulto</label><br />
+										<select name="pases" id="pases"
+											type="text"
+											class="py-2.5 px-0 w-full my-2 px-4 py-3 border rounded-lg text-black-primary focus:outline-none text-sm " required ">
+
+									<?php
+									if (isset($_GET['invitado'])) {
+
+										if ($invitado->pases != '') {
+
+											for ($i = 1; $i <= $invitado->pases; $i++) {
+
+									?> 
+										<option value=" <?php echo $i ?>"><?php echo $i ?></option>
+								<?php }
+										}
+									} else {
+										echo '<option value="0" selected >0</option>';
+									}
+
+								?>
+										</select>
+									</div>
+									<div class="w-full mb-5">
+										<label for="paseschildren" class="font-Georgia text-white text-3xl">#pases niño</label><br />
+										<select name="paseschildren" id="paseschildren"
+											type="text"
+											class="py-2.5 px-0 w-full my-2 px-4 py-3 border rounded-lg text-black-primary focus:outline-none text-sm " required ">
+										<?php
+										if (isset($_GET['invitado'])) {
+
+											if ($invitado->paseschildren != '') {
+												echo '<option value="0" selected >0</option>';
+												for ($i = 1; $i <= $invitado->paseschildren; $i++) {
+
+										?> 
+										<option value=" <?php echo $i ?>"><?php echo $i ?></option>
+								<?php }
+											}
+										} else {
+											echo '<option value="0" selected >0</option>';
+										}
+
+								?>
+										</select>
+									</div>
+									<!-- <div class="relative z-0 w-full mb-5 group">
 								<label for="Alergias" class="font-Georgia text-white text-3xl">Alergias</label><br />
 								<input type="text" name="Alergias" id="Alergias"
 									style=" border-bottom: white 1px solid!important;"
 									class="font-Georgia pl-1 block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white appearance-none  focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " />
 
+							</div> -->
+									<div class="flex justify-center">
+										<button type="submit" class="bg-rosa20   font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" style="background-color: #905F68;">Confirmación de asistencia</button>
+									</div>
+
+								</form>
 							</div>
-							
-							<button type="submit" class="bg-rosa20  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Confirmar</button>
-						</form>
-					</div>
-					<div class="flex justify-center">
-						<img src="<?= $baseUrl ?>src/img/elementos/elemento_stephy.png" data-aos="fade-up" data-aos-duration="1500" />
+							<div class="flex justify-center">
+								<img src="<?= $baseUrl ?>src/img/elementos/elemento_stephy.png" />
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
 			</div>
 		</div>
 	</div>
@@ -618,5 +729,5 @@
 	<script type="text/javascript" src="<?= $baseUrl ?>src/js/app.js"></script>
 	<script type="text/javascript" src="<?= $baseUrl ?>src/js/proyecto/actions.js"></script>
 	<script>
-		
+
 	</script>

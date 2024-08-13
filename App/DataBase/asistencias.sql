@@ -19,39 +19,18 @@
 CREATE DATABASE IF NOT EXISTS `xvstephy` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `xvstephy`;
 
--- Volcando estructura para tabla xvstephy.accounts
-CREATE TABLE IF NOT EXISTS `accounts` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
-
--- Volcando datos para la tabla xvstephy.accounts: ~1 rows (aproximadamente)
-
 -- Volcando estructura para tabla xvstephy.asistencia
 CREATE TABLE IF NOT EXISTS `asistencia` (
   `id` int NOT NULL AUTO_INCREMENT,
   `uid` varchar(255) DEFAULT NULL,
   `Nombre` varchar(150) DEFAULT NULL,
   `pases` varchar(255) DEFAULT NULL,
+  `paseschildren` varchar(255) DEFAULT NULL,
   `alergia` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3;
 
-
--- Volcando estructura para tabla xvstephy.invitados
-CREATE TABLE IF NOT EXISTS `invitados` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `Nombre` varchar(150) DEFAULT NULL,
-  `pases` varchar(255) DEFAULT NULL,
-  `uid` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb3;
-
-
-
+-- La exportación de datos fue deseleccionada.
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

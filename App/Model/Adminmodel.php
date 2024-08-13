@@ -19,15 +19,16 @@ class Adminmodel extends Model{
         
     }
 
-    public function setInvitados($datos,$pase)
+    public function setInvitados($datos,$pase,$pasen)
     {   
         try{
             
-            $statement = $this->db->prepare('INSERT INTO invitados (Nombre,pases, uid) VALUES (:Nombre,:pases,:uid)');
+            $statement = $this->db->prepare('INSERT INTO invitados (Nombre,pases,paseschildren, uid) VALUES (:Nombre,:pases,:paseschildren,:uid)');
 
                 $status = $statement->execute([
                     'Nombre' => $datos,
                     'pases'=>$pase,
+                    'paseschildren'=>$pasen,
                     'uid' => Uuid::uuid4(),
                     ]);
             return ['status'=>$status,'error'=>false,'id'=>$this->db->lastInsertId()];
@@ -40,9 +41,9 @@ class Adminmodel extends Model{
 
     public function getinvitados()
     {
-        $sql = "SELECT Nombre,pases,uid FROM invitados";
+        $sql = "SELECT Nombre,pases,paseschildren,uid FROM invitados";
         $query = $this->db->prepare($sql);
         $query->execute();
-        return $query->fetch();
+        return $query->fetchAll();
     }
 }
