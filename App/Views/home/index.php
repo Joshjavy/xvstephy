@@ -1,3 +1,12 @@
+<?php 
+	if(!isset($_GET['invitado'])) {
+		echo'<meta http-equiv="refresh" content="0; url='.$baseUrl.'Home/login">';
+		return false;
+	}
+	
+ ?>
+ 	<!--Importar materialize.css-->
+	<link type="text/css" rel="stylesheet" href="<?= $baseUrl ?>src/css/materialize.min.css">
 <body class="position-relative sm:text-2xl	 text-2xl	 md:text-2xl		 lg:text-lg 2xl:text-3xl 2xl:text-3xl" style="background-color: #905F68;">
 	<!---- Modal msj ---->
 	<div id="modal_mensaje" class="modal">

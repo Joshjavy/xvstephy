@@ -6,17 +6,16 @@ use Core\View;
 use App\Model\Adminmodel;
 use App\Model\ModelDeseos;
 use App\Config\env;
+
 class Home
 {
-    public function index() {
-        
-        $db = new ModelDeseos();
-        $invitado=isset($_GET['invitado'])? $db->getinvitado($_GET['invitado']):'anonimo';
-        
-        
-        $views = ['home/index'];
-        $args  = ['title' => 'Home','invitado'=>$invitado];
-        View::render($views, $args);
+    public function index()
+    {
+            $db = new ModelDeseos();
+            $invitado = isset($_GET['invitado']) ? $db->getinvitado($_GET['invitado']) : 'anonimo';
+            $views = ['home/index'];
+            $args  = ['title' => 'Home', 'invitado' => $invitado];
+            View::render($views, $args); 
     }
 
     public function dashboard()
@@ -39,16 +38,16 @@ class Home
     {
         $db = new Adminmodel();
         $views = ['admin/invitados'];
-        $args  = ['title' => 'Home','site'=>env::site,'datos'=>$db->getinvitados()];
+        $args  = ['title' => 'Home', 'site' => env::site, 'datos' => $db->getinvitados()];
         View::render($views, $args);
     }
 
     public function asistencia()
     {
         $db = new ModelDeseos();
-        
+
         $views = ['admin/asistencia'];
-        $args  = ['title' => 'Home','site'=>env::site,'datos'=>$db->getAsistencia()];
+        $args  = ['title' => 'Home', 'site' => env::site, 'datos' => $db->getAsistencia()];
         View::render($views, $args);
     }
 
@@ -90,9 +89,9 @@ class Home
 
                 // Insertando información
                 foreach ($rows as $r) {
-                    $pase=isset($r[1])? $r[1]:'';
-                    $pasen=isset($r[2])? $r[2]:'';
-                    if ($db->setInvitados($r[0],$pase,$pasen) == false) {
+                    $pase = isset($r[1]) ? $r[1] : '';
+                    $pasen = isset($r[2]) ? $r[2] : '';
+                    if ($db->setInvitados($r[0], $pase, $pasen) == false) {
                         $errors++;
                         continue;
                     }
@@ -106,7 +105,6 @@ class Home
                     echo 'Tuvimos problemas al importar <b>%s</b> registros.';
                 }
             } catch (\Exception $e) {
-
             }
         }
     }

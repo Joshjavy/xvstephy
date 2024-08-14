@@ -1271,3 +1271,83 @@ input:checked + label {
        width: 100%;
     }
   }
+
+
+nav{
+  background-color:var(--rosa20);
+  
+}
+  
+  .admin ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 35px;
+    padding-top: 15;
+    padding-left: 25px;
+}
+
+.admin li {
+    display: inline; /* Hace que los ítems del menú estén en una línea horizontal */
+    margin-right: 20px; /* Espacio entre los ítems del menú */
+}
+
+.admin a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.admin a:hover {
+    text-decoration: underline;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+
+thead,
+tfoot {
+  background-color: rgb(227, 231, 233);
+  color: var(--rosa20);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+  color: var(--rosa20);
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+[type=search] {
+  
+}
+
+div.dt-container .dt-input {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: #c5c3c3 !important;
+  color: inherit;
+}

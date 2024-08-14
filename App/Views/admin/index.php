@@ -7,15 +7,13 @@ if (!isset($_SESSION['loggedin'])) {
 	exit;
 }
 ?>
-<nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
-  <div class="mb-2 sm:mb-0">
-  </div>
-  <div>
-    <a href="<?php $baseUrl?>invitados" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Invitados</a>
-    <a href="<?php $baseUrl?>asistencia" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">asistencia</a>
-    <a href="<?php $baseUrl?>" base="<?php echo $baseUrl?>" class="btnsalir  text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Salir</a>
-  </div>
-</nav>
+<nav class="admin">
+    <ul>
+      <li><a href="<?php $baseUrl?>invitados">Invitados</a></li>
+      <li><a href="<?php $baseUrl?>asistencia">Asistencia</a></li>
+      <li><a href="<?php $baseUrl?>" base="<?php echo $baseUrl?>" class="btnsalir">Salir</a></li>
+    </ul>
+  </nav>
 
 
 </main>

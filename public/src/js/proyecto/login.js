@@ -12,9 +12,11 @@ function handleSubmit(event) {
       let datos =response.data;
       console.log(datos)
       if(datos.data){
-        window.location = `${dashboard}Home/dashboard`
+        window.location = `${dashboard}Home/invitados`
+      }else{
+        message(datos.message)
       }
-      message(datos.message)
+      
       
     })
     .catch(function (error) {
